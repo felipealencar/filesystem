@@ -1,0 +1,7 @@
+# Tracing options for the filesystem.diagram plug-in
+
+# Common issues
+filesystem.diagram/debug=false
+
+# Visual IDs
+filesystem.diagram/debug/visualID=false
