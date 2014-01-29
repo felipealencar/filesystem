@@ -245,49 +245,39 @@ public class FilesystemNavigatorContentProvider implements
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
 
-		case ShortcutTargetEditPart.VISUAL_ID: {
+		case ShortcutEditPart.VISUAL_ID: {
 			LinkedList<FilesystemAbstractNavigatorItem> result = new LinkedList<FilesystemAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			FilesystemNavigatorGroup target = new FilesystemNavigatorGroup(
-					Messages.NavigatorGroupName_ShortcutTarget_4002_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			FilesystemNavigatorGroup source = new FilesystemNavigatorGroup(
-					Messages.NavigatorGroupName_ShortcutTarget_4002_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Node sv = (Node) view;
+			FilesystemNavigatorGroup incominglinks = new FilesystemNavigatorGroup(
+					Messages.NavigatorGroupName_Shortcut_3007_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			FilesystemNavigatorGroup outgoinglinks = new FilesystemNavigatorGroup(
+					Messages.NavigatorGroupName_Shortcut_3007_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FilesystemVisualIDRegistry.getType(DriveEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					FilesystemVisualIDRegistry.getType(SyncEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					FilesystemVisualIDRegistry.getType(SyncEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					FilesystemVisualIDRegistry
-							.getType(Drive2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+							.getType(ShortcutTargetEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					FilesystemVisualIDRegistry
-							.getType(FolderEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FilesystemVisualIDRegistry
-							.getType(ShortcutEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FilesystemVisualIDRegistry.getType(FileEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					FilesystemVisualIDRegistry
-							.getType(ShortcutEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
+							.getType(ShortcutTargetEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
-			if (!source.isEmpty()) {
-				result.add(source);
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}
@@ -363,10 +353,10 @@ public class FilesystemNavigatorContentProvider implements
 			LinkedList<FilesystemAbstractNavigatorItem> result = new LinkedList<FilesystemAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			FilesystemNavigatorGroup incominglinks = new FilesystemNavigatorGroup(
-					Messages.NavigatorGroupName_Folder_3002_incominglinks,
+					Messages.NavigatorGroupName_Folder_3009_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			FilesystemNavigatorGroup outgoinglinks = new FilesystemNavigatorGroup(
-					Messages.NavigatorGroupName_Folder_3002_outgoinglinks,
+					Messages.NavigatorGroupName_Folder_3009_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(
@@ -426,16 +416,51 @@ public class FilesystemNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case ShortcutEditPart.VISUAL_ID: {
+		case Drive2EditPart.VISUAL_ID: {
 			LinkedList<FilesystemAbstractNavigatorItem> result = new LinkedList<FilesystemAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			FilesystemNavigatorGroup incominglinks = new FilesystemNavigatorGroup(
-					Messages.NavigatorGroupName_Shortcut_3003_incominglinks,
+					Messages.NavigatorGroupName_Drive_3008_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			FilesystemNavigatorGroup outgoinglinks = new FilesystemNavigatorGroup(
-					Messages.NavigatorGroupName_Shortcut_3003_outgoinglinks,
+					Messages.NavigatorGroupName_Drive_3008_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					FilesystemVisualIDRegistry
+							.getType(DriveDriveContentsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					FilesystemVisualIDRegistry
+							.getType(Drive2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					FilesystemVisualIDRegistry
+							.getType(DriveDriveContentsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					FilesystemVisualIDRegistry
+							.getType(FolderEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					FilesystemVisualIDRegistry
+							.getType(DriveDriveContentsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					FilesystemVisualIDRegistry
+							.getType(ShortcutEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					FilesystemVisualIDRegistry
+							.getType(DriveDriveContentsCompartment2EditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					FilesystemVisualIDRegistry.getType(FileEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					FilesystemVisualIDRegistry.getType(SyncEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews,
@@ -449,11 +474,6 @@ public class FilesystemNavigatorContentProvider implements
 							.getType(ShortcutTargetEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews,
 					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					FilesystemVisualIDRegistry
-							.getType(ShortcutTargetEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
 			}
@@ -553,73 +573,6 @@ public class FilesystemNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case Drive2EditPart.VISUAL_ID: {
-			LinkedList<FilesystemAbstractNavigatorItem> result = new LinkedList<FilesystemAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			FilesystemNavigatorGroup incominglinks = new FilesystemNavigatorGroup(
-					Messages.NavigatorGroupName_Drive_3001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			FilesystemNavigatorGroup outgoinglinks = new FilesystemNavigatorGroup(
-					Messages.NavigatorGroupName_Drive_3001_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					FilesystemVisualIDRegistry
-							.getType(DriveDriveContentsCompartment2EditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					FilesystemVisualIDRegistry
-							.getType(Drive2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					FilesystemVisualIDRegistry
-							.getType(DriveDriveContentsCompartment2EditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					FilesystemVisualIDRegistry
-							.getType(FolderEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					FilesystemVisualIDRegistry
-							.getType(DriveDriveContentsCompartment2EditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					FilesystemVisualIDRegistry
-							.getType(ShortcutEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					FilesystemVisualIDRegistry
-							.getType(DriveDriveContentsCompartment2EditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					FilesystemVisualIDRegistry.getType(FileEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					FilesystemVisualIDRegistry.getType(SyncEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					FilesystemVisualIDRegistry.getType(SyncEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					FilesystemVisualIDRegistry
-							.getType(ShortcutTargetEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
 		case FileEditPart.VISUAL_ID: {
 			LinkedList<FilesystemAbstractNavigatorItem> result = new LinkedList<FilesystemAbstractNavigatorItem>();
 			Node sv = (Node) view;
@@ -648,6 +601,53 @@ public class FilesystemNavigatorContentProvider implements
 			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case ShortcutTargetEditPart.VISUAL_ID: {
+			LinkedList<FilesystemAbstractNavigatorItem> result = new LinkedList<FilesystemAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			FilesystemNavigatorGroup target = new FilesystemNavigatorGroup(
+					Messages.NavigatorGroupName_ShortcutTarget_4002_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			FilesystemNavigatorGroup source = new FilesystemNavigatorGroup(
+					Messages.NavigatorGroupName_ShortcutTarget_4002_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FilesystemVisualIDRegistry.getType(DriveEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FilesystemVisualIDRegistry
+							.getType(Drive2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FilesystemVisualIDRegistry
+							.getType(FolderEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FilesystemVisualIDRegistry
+							.getType(ShortcutEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FilesystemVisualIDRegistry.getType(FileEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					FilesystemVisualIDRegistry
+							.getType(ShortcutEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
 			}
 			return result.toArray();
 		}

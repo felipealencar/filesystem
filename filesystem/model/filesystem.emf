@@ -1,4 +1,4 @@
-@namespace(uri="filesystem", prefix="filesystem")
+@namespace(uri="filesystem", prefix="")
 @gmf
 package filesystem;
 
@@ -8,15 +8,18 @@ class Filesystem {
     val Sync[*] syncs;
 }
 
+@gmf.node(figure="rounded",label.icon="true",tool.small.bundle="filesystem.edit", tool.small.path="/icons/full/obj16/CD.gif")
 class Drive extends Folder {
 
 }
 
+@gmf.node(figure="rounded",label.icon="true",tool.small.bundle="filesystem.edit", tool.small.path="/icons/full/obj16/Folder.gif")
 class Folder extends File {
     @gmf.compartment
     val File[*] contents;
 }
-
+/*@gmf.node(figure="figures.FileFigure", label.icon="false", label="name", label.placement="external", tool.small.bundle="filesystem.edit", tool.small.path="/icons/full/obj16/List.gif")*/
+@gmf.node(label.icon="true",tool.small.bundle="filesystem.edit", tool.small.path="/icons/full/obj16/Trackback.gif")
 class Shortcut extends File {
     @gmf.link(target.decoration="arrow", style="dash")
     ref File target;
@@ -28,7 +31,7 @@ class Sync {
     ref File target;
 }
 
-@gmf.node(label = "name")
+@gmf.node(figure="figures.FileFigure",label = "name", label.icon="true",tool.small.bundle="filesystem.edit", tool.small.path="/icons/full/obj16/List.gif")
 class File {
     attr String name;
 }

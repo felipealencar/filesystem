@@ -28,6 +28,7 @@ import filesystem.diagram.edit.parts.ShortcutEditPart;
 import filesystem.diagram.edit.parts.ShortcutNameEditPart;
 import filesystem.diagram.edit.parts.ShortcutTargetEditPart;
 import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.WrappingLabel2EditPart;
 import filesystem.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
@@ -373,8 +374,8 @@ public class FilesystemVisualIDRegistry {
 		switch (visualID) {
 		case FilesystemEditPart.VISUAL_ID:
 			return false;
-		case ShortcutEditPart.VISUAL_ID:
 		case FileEditPart.VISUAL_ID:
+		case ShortcutEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

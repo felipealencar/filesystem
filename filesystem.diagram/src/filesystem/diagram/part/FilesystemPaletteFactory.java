@@ -65,13 +65,13 @@ public class FilesystemPaletteFactory {
 	private ToolEntry createDrive1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(FilesystemElementTypes.Drive_2001);
-		types.add(FilesystemElementTypes.Drive_3001);
+		types.add(FilesystemElementTypes.Drive_3008);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Drive1CreationTool_title,
 				Messages.Drive1CreationTool_desc, types);
 		entry.setId("createDrive1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FilesystemElementTypes
-				.getImageDescriptor(FilesystemElementTypes.Drive_2001));
+		entry.setSmallIcon(FilesystemDiagramEditorPlugin
+				.findImageDescriptor("/filesystem.edit/icons/full/obj16/CD.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -85,8 +85,8 @@ public class FilesystemPaletteFactory {
 				Messages.File2CreationTool_desc,
 				Collections.singletonList(FilesystemElementTypes.File_3004));
 		entry.setId("createFile2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FilesystemElementTypes
-				.getImageDescriptor(FilesystemElementTypes.File_3004));
+		entry.setSmallIcon(FilesystemDiagramEditorPlugin
+				.findImageDescriptor("/filesystem.edit/icons/full/obj16/List.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -98,10 +98,10 @@ public class FilesystemPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Folder3CreationTool_title,
 				Messages.Folder3CreationTool_desc,
-				Collections.singletonList(FilesystemElementTypes.Folder_3002));
+				Collections.singletonList(FilesystemElementTypes.Folder_3009));
 		entry.setId("createFolder3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FilesystemElementTypes
-				.getImageDescriptor(FilesystemElementTypes.Folder_3002));
+		entry.setSmallIcon(FilesystemDiagramEditorPlugin
+				.findImageDescriptor("/filesystem.edit/icons/full/obj16/Folder.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -113,10 +113,10 @@ public class FilesystemPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Shortcut4CreationTool_title,
 				Messages.Shortcut4CreationTool_desc,
-				Collections.singletonList(FilesystemElementTypes.Shortcut_3003));
+				Collections.singletonList(FilesystemElementTypes.Shortcut_3007));
 		entry.setId("createShortcut4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FilesystemElementTypes
-				.getImageDescriptor(FilesystemElementTypes.Shortcut_3003));
+		entry.setSmallIcon(FilesystemDiagramEditorPlugin
+				.findImageDescriptor("/filesystem.edit/icons/full/obj16/Trackback.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

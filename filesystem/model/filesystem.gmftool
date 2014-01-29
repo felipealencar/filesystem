@@ -15,7 +15,9 @@
           title="Drive"
           description="Create new Drive">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/CD.gif"
+            bundle="filesystem.edit"/>
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
@@ -24,7 +26,9 @@
           title="File"
           description="Create new File">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/List.gif"
+            bundle="filesystem.edit"/>
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
@@ -33,7 +37,9 @@
           title="Folder"
           description="Create new Folder">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Folder.gif"
+            bundle="filesystem.edit"/>
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
@@ -42,7 +48,9 @@
           title="Shortcut"
           description="Create new Shortcut">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Trackback.gif"
+            bundle="filesystem.edit"/>
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>

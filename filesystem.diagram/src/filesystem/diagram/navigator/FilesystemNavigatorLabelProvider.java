@@ -34,6 +34,7 @@ import filesystem.diagram.edit.parts.ShortcutEditPart;
 import filesystem.diagram.edit.parts.ShortcutNameEditPart;
 import filesystem.diagram.edit.parts.ShortcutTargetEditPart;
 import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.WrappingLabelEditPart;
 import filesystem.diagram.part.FilesystemDiagramEditorPlugin;
 import filesystem.diagram.part.FilesystemVisualIDRegistry;
 import filesystem.diagram.providers.FilesystemElementTypes;
@@ -106,30 +107,30 @@ public class FilesystemNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
-		case ShortcutTargetEditPart.VISUAL_ID:
+		case ShortcutEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?filesystem?Shortcut?target", FilesystemElementTypes.ShortcutTarget_4002); //$NON-NLS-1$
+					"Navigator?Node?filesystem?Shortcut", FilesystemElementTypes.Shortcut_3007); //$NON-NLS-1$
 		case DriveEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?filesystem?Drive", FilesystemElementTypes.Drive_2001); //$NON-NLS-1$
 		case FolderEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?filesystem?Folder", FilesystemElementTypes.Folder_3002); //$NON-NLS-1$
-		case ShortcutEditPart.VISUAL_ID:
+					"Navigator?Node?filesystem?Folder", FilesystemElementTypes.Folder_3009); //$NON-NLS-1$
+		case Drive2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?filesystem?Shortcut", FilesystemElementTypes.Shortcut_3003); //$NON-NLS-1$
+					"Navigator?Node?filesystem?Drive", FilesystemElementTypes.Drive_3008); //$NON-NLS-1$
 		case SyncEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?filesystem?Sync", FilesystemElementTypes.Sync_4001); //$NON-NLS-1$
 		case FilesystemEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?filesystem?Filesystem", FilesystemElementTypes.Filesystem_1000); //$NON-NLS-1$
-		case Drive2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?filesystem?Drive", FilesystemElementTypes.Drive_3001); //$NON-NLS-1$
 		case FileEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?filesystem?File", FilesystemElementTypes.File_3004); //$NON-NLS-1$
+		case ShortcutTargetEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?filesystem?Shortcut?target", FilesystemElementTypes.ShortcutTarget_4002); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -190,24 +191,51 @@ public class FilesystemNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (FilesystemVisualIDRegistry.getVisualID(view)) {
-		case ShortcutTargetEditPart.VISUAL_ID:
-			return getShortcutTarget_4002Text(view);
+		case ShortcutEditPart.VISUAL_ID:
+			return getShortcut_3007Text(view);
 		case DriveEditPart.VISUAL_ID:
 			return getDrive_2001Text(view);
 		case FolderEditPart.VISUAL_ID:
-			return getFolder_3002Text(view);
-		case ShortcutEditPart.VISUAL_ID:
-			return getShortcut_3003Text(view);
+			return getFolder_3009Text(view);
+		case Drive2EditPart.VISUAL_ID:
+			return getDrive_3008Text(view);
 		case SyncEditPart.VISUAL_ID:
 			return getSync_4001Text(view);
 		case FilesystemEditPart.VISUAL_ID:
 			return getFilesystem_1000Text(view);
-		case Drive2EditPart.VISUAL_ID:
-			return getDrive_3001Text(view);
 		case FileEditPart.VISUAL_ID:
 			return getFile_3004Text(view);
+		case ShortcutTargetEditPart.VISUAL_ID:
+			return getShortcutTarget_4002Text(view);
 		}
 		return getUnknownElementText(view);
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getShortcut_3007Text(View view) {
+		IParser parser = FilesystemParserProvider.getParser(
+				FilesystemElementTypes.Shortcut_3007,
+				view.getElement() != null ? view.getElement() : view,
+				FilesystemVisualIDRegistry
+						.getType(ShortcutNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FilesystemDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5008); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSync_4001Text(View view) {
+		return ""; //$NON-NLS-1$
 	}
 
 	/**
@@ -252,9 +280,9 @@ public class FilesystemNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getFolder_3002Text(View view) {
+	private String getFolder_3009Text(View view) {
 		IParser parser = FilesystemParserProvider.getParser(
-				FilesystemElementTypes.Folder_3002,
+				FilesystemElementTypes.Folder_3009,
 				view.getElement() != null ? view.getElement() : view,
 				FilesystemVisualIDRegistry
 						.getType(FolderNameEditPart.VISUAL_ID));
@@ -264,7 +292,7 @@ public class FilesystemNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			FilesystemDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5003); //$NON-NLS-1$
+					"Parser was not found for label " + 5009); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -272,43 +300,9 @@ public class FilesystemNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getShortcut_3003Text(View view) {
+	private String getDrive_3008Text(View view) {
 		IParser parser = FilesystemParserProvider.getParser(
-				FilesystemElementTypes.Shortcut_3003,
-				view.getElement() != null ? view.getElement() : view,
-				FilesystemVisualIDRegistry
-						.getType(ShortcutNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			FilesystemDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getSync_4001Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getFilesystem_1000Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getDrive_3001Text(View view) {
-		IParser parser = FilesystemParserProvider.getParser(
-				FilesystemElementTypes.Drive_3001,
+				FilesystemElementTypes.Drive_3008,
 				view.getElement() != null ? view.getElement() : view,
 				FilesystemVisualIDRegistry
 						.getType(DriveName2EditPart.VISUAL_ID));
@@ -318,7 +312,7 @@ public class FilesystemNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			FilesystemDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5004); //$NON-NLS-1$
+					"Parser was not found for label " + 5010); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -337,9 +331,16 @@ public class FilesystemNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			FilesystemDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5002); //$NON-NLS-1$
+					"Parser was not found for label " + 5007); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getFilesystem_1000Text(View view) {
+		return ""; //$NON-NLS-1$
 	}
 
 	/**

@@ -61,7 +61,7 @@ public class ShortcutNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5001;
+	public static final int VISUAL_ID = 5008;
 
 	/**
 	 * @generated
@@ -311,7 +311,7 @@ public class ShortcutNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = FilesystemParserProvider
 					.getParser(
-							FilesystemElementTypes.Shortcut_3003,
+							FilesystemElementTypes.Shortcut_3007,
 							getParserElement(),
 							FilesystemVisualIDRegistry
 									.getType(filesystem.diagram.edit.parts.ShortcutNameEditPart.VISUAL_ID));

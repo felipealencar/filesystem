@@ -45,7 +45,7 @@ public class FolderItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public FolderItemSemanticEditPolicy() {
-		super(FilesystemElementTypes.Folder_3002);
+		super(FilesystemElementTypes.Folder_3009);
 	}
 
 	/**

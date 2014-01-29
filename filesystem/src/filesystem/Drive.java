@@ -10,7 +10,7 @@ package filesystem;
  *
  *
  * @see filesystem.FilesystemPackage#getDrive()
- * @model
+ * @model annotation="gmf.node figure='rounded' label.icon='true' tool.small.bundle='filesystem.edit' tool.small.path='/icons/full/obj16/CD.gif'"
  * @generated
  */
 public interface Drive extends Folder

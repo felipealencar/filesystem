@@ -46,7 +46,7 @@ public interface FilesystemPackage extends EPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  String eNS_PREFIX = "filesystem";
+  String eNS_PREFIX = "";
 
   /**
    * The singleton instance of the package.
@@ -104,6 +104,46 @@ public interface FilesystemPackage extends EPackage
   int FILE = 5;
 
   /**
+   * The meta object id for the '{@link filesystem.impl.FolderImpl <em>Folder</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see filesystem.impl.FolderImpl
+   * @see filesystem.impl.FilesystemPackageImpl#getFolder()
+   * @generated
+   */
+  int FOLDER = 2;
+
+  /**
+   * The meta object id for the '{@link filesystem.impl.DriveImpl <em>Drive</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see filesystem.impl.DriveImpl
+   * @see filesystem.impl.FilesystemPackageImpl#getDrive()
+   * @generated
+   */
+  int DRIVE = 1;
+
+  /**
+   * The meta object id for the '{@link filesystem.impl.ShortcutImpl <em>Shortcut</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see filesystem.impl.ShortcutImpl
+   * @see filesystem.impl.FilesystemPackageImpl#getShortcut()
+   * @generated
+   */
+  int SHORTCUT = 3;
+
+  /**
+   * The meta object id for the '{@link filesystem.impl.SyncImpl <em>Sync</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see filesystem.impl.SyncImpl
+   * @see filesystem.impl.FilesystemPackageImpl#getSync()
+   * @generated
+   */
+  int SYNC = 4;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -120,16 +160,6 @@ public interface FilesystemPackage extends EPackage
    * @ordered
    */
   int FILE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link filesystem.impl.FolderImpl <em>Folder</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see filesystem.impl.FolderImpl
-   * @see filesystem.impl.FilesystemPackageImpl#getFolder()
-   * @generated
-   */
-  int FOLDER = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -159,16 +189,6 @@ public interface FilesystemPackage extends EPackage
   int FOLDER_FEATURE_COUNT = FILE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link filesystem.impl.DriveImpl <em>Drive</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see filesystem.impl.DriveImpl
-   * @see filesystem.impl.FilesystemPackageImpl#getDrive()
-   * @generated
-   */
-  int DRIVE = 1;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -196,16 +216,6 @@ public interface FilesystemPackage extends EPackage
   int DRIVE_FEATURE_COUNT = FOLDER_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link filesystem.impl.ShortcutImpl <em>Shortcut</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see filesystem.impl.ShortcutImpl
-   * @see filesystem.impl.FilesystemPackageImpl#getShortcut()
-   * @generated
-   */
-  int SHORTCUT = 3;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -231,16 +241,6 @@ public interface FilesystemPackage extends EPackage
    * @ordered
    */
   int SHORTCUT_FEATURE_COUNT = FILE_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link filesystem.impl.SyncImpl <em>Sync</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see filesystem.impl.SyncImpl
-   * @see filesystem.impl.FilesystemPackageImpl#getSync()
-   * @generated
-   */
-  int SYNC = 4;
 
   /**
    * The feature id for the '<em><b>Source</b></em>' reference.

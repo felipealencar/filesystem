@@ -336,12 +336,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_ShortcutTarget_4002_target;
+	public static String NavigatorGroupName_Shortcut_3007_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_ShortcutTarget_4002_source;
+	public static String NavigatorGroupName_Shortcut_3007_outgoinglinks;
 
 	/**
 	 * @generated
@@ -356,22 +356,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Folder_3002_incominglinks;
+	public static String NavigatorGroupName_Folder_3009_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Folder_3002_outgoinglinks;
+	public static String NavigatorGroupName_Folder_3009_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Shortcut_3003_incominglinks;
+	public static String NavigatorGroupName_Drive_3008_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Shortcut_3003_outgoinglinks;
+	public static String NavigatorGroupName_Drive_3008_outgoinglinks;
 
 	/**
 	 * @generated
@@ -386,17 +386,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Filesystem_1000_links;
+	public static String NavigatorGroupName_ShortcutTarget_4002_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Drive_3001_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Drive_3001_outgoinglinks;
+	public static String NavigatorGroupName_ShortcutTarget_4002_source;
 
 	/**
 	 * @generated
@@ -407,6 +402,11 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_File_3004_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Filesystem_1000_links;
 
 	/**
 	 * @generated

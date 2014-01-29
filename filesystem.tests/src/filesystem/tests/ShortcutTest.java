@@ -5,6 +5,7 @@ package filesystem.tests;
 import filesystem.FilesystemFactory;
 import filesystem.Shortcut;
 
+import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 /**

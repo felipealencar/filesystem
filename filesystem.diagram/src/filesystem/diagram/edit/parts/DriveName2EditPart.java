@@ -61,7 +61,7 @@ public class DriveName2EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 5010;
 
 	/**
 	 * @generated
@@ -311,7 +311,7 @@ public class DriveName2EditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = FilesystemParserProvider
 					.getParser(
-							FilesystemElementTypes.Drive_3001,
+							FilesystemElementTypes.Drive_3008,
 							getParserElement(),
 							FilesystemVisualIDRegistry
 									.getType(filesystem.diagram.edit.parts.DriveName2EditPart.VISUAL_ID));

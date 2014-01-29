@@ -28,7 +28,7 @@
     <domainDiagramElement
         href="filesystem.genmodel#//filesystem/Filesystem"/>
     <childNodes
-        visualID="3001"
+        visualID="3008"
         editPartClassName="Drive2EditPart"
         itemSemanticEditPolicyClassName="Drive2ItemSemanticEditPolicy"
         canonicalEditPolicyClassName="Drive2CanonicalEditPolicy"
@@ -56,7 +56,7 @@
             href="filesystem.genmodel#//filesystem/Folder/contents"/>
       </modelFacet>
       <labels
-          visualID="5004"
+          visualID="5010"
           editPartClassName="DriveName2EditPart"
           itemSemanticEditPolicyClassName="DriveName2ItemSemanticEditPolicy"
           elementIcon="true">
@@ -75,7 +75,7 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3002"
+        visualID="3009"
         editPartClassName="FolderEditPart"
         itemSemanticEditPolicyClassName="FolderItemSemanticEditPolicy"
         canonicalEditPolicyClassName="FolderCanonicalEditPolicy"
@@ -103,7 +103,7 @@
             href="filesystem.genmodel#//filesystem/Folder/contents"/>
       </modelFacet>
       <labels
-          visualID="5003"
+          visualID="5009"
           editPartClassName="FolderNameEditPart"
           itemSemanticEditPolicyClassName="FolderNameItemSemanticEditPolicy"
           elementIcon="true">
@@ -122,7 +122,7 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3003"
+        visualID="3007"
         editPartClassName="ShortcutEditPart"
         itemSemanticEditPolicyClassName="ShortcutItemSemanticEditPolicy"
         canonicalEditPolicyClassName="ShortcutCanonicalEditPolicy"
@@ -137,7 +137,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="ShortcutFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ShortcutFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureShortcutLabelFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ShortcutFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureShortcutLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureShortcutLabelFigure.setText(&quot;Shortcut&quot;);&#xA;&#xA;this.add(fFigureShortcutLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureShortcutLabelFigure() {&#xA;&#x9;&#x9;return fFigureShortcutLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ShortcutFigure extends figures.FileFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureShortcutLabelFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ShortcutFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureShortcutLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureShortcutLabelFigure.setText(&quot;Shortcut&quot;);&#xA;&#xA;this.add(fFigureShortcutLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureShortcutLabelFigure() {&#xA;&#x9;&#x9;return fFigureShortcutLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
             href="filesystem.genmodel#//filesystem/Shortcut"/>
@@ -147,7 +147,7 @@
             href="filesystem.genmodel#//filesystem/Folder/contents"/>
       </modelFacet>
       <labels
-          visualID="5001"
+          visualID="5008"
           editPartClassName="ShortcutNameEditPart"
           itemSemanticEditPolicyClassName="ShortcutNameItemSemanticEditPolicy"
           elementIcon="true">
@@ -181,7 +181,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="FileFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FileFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFileLabelFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FileFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFileLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureFileLabelFigure.setText(&quot;File&quot;);&#xA;&#xA;this.add(fFigureFileLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFileLabelFigure() {&#xA;&#x9;&#x9;return fFigureFileLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FileFigure extends figures.FileFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFileLabelFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FileFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFileLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureFileLabelFigure.setText(&quot;File&quot;);&#xA;&#xA;this.add(fFigureFileLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFileLabelFigure() {&#xA;&#x9;&#x9;return fFigureFileLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
             href="filesystem.genmodel#//filesystem/File"/>
@@ -191,7 +191,7 @@
             href="filesystem.genmodel#//filesystem/Folder/contents"/>
       </modelFacet>
       <labels
-          visualID="5002"
+          visualID="5007"
           editPartClassName="FileNameEditPart"
           itemSemanticEditPolicyClassName="FileNameItemSemanticEditPolicy"
           elementIcon="true">
@@ -381,21 +381,25 @@
             xsi:type="gmfgen:ToolEntry"
             title="Drive"
             description="Create new Drive"
+            smallIconPath="/filesystem.edit/icons/full/obj16/CD.gif"
             genNodes="//@diagram/@topLevelNodes.0 //@diagram/@childNodes.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="File"
             description="Create new File"
+            smallIconPath="/filesystem.edit/icons/full/obj16/List.gif"
             genNodes="//@diagram/@childNodes.3"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Folder"
             description="Create new Folder"
+            smallIconPath="/filesystem.edit/icons/full/obj16/Folder.gif"
             genNodes="//@diagram/@childNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Shortcut"
             description="Create new Shortcut"
+            smallIconPath="/filesystem.edit/icons/full/obj16/Trackback.gif"
             genNodes="//@diagram/@childNodes.2"/>
       </groups>
       <groups
@@ -444,6 +448,7 @@
     <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
     <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
     <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
+    <requiredPlugins>filesystem.figures</requiredPlugins>
   </plugin>
   <editor/>
   <navigator>

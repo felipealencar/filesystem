@@ -372,11 +372,11 @@ public class FilesystemPackageImpl extends EPackageImpl implements FilesystemPac
     createGmfAnnotations();
     // gmf.diagram
     createGmf_1Annotations();
-    // gmf.compartment
-    createGmf_2Annotations();
-    // gmf.link
-    createGmf_3Annotations();
     // gmf.node
+    createGmf_2Annotations();
+    // gmf.compartment
+    createGmf_3Annotations();
+    // gmf.link
     createGmf_4Annotations();
   }
 
@@ -394,7 +394,7 @@ public class FilesystemPackageImpl extends EPackageImpl implements FilesystemPac
        source, 
        new String[] 
        {
-       });					
+       });								
   }
 
   /**
@@ -411,7 +411,58 @@ public class FilesystemPackageImpl extends EPackageImpl implements FilesystemPac
        source, 
        new String[] 
        {
+       });							
+  }
+
+  /**
+   * Initializes the annotations for <b>gmf.node</b>.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected void createGmf_2Annotations()
+  {
+    String source = "gmf.node";				
+    addAnnotation
+      (driveEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "rounded",
+       "label.icon", "true",
+       "tool.small.bundle", "filesystem.edit",
+       "tool.small.path", "/icons/full/obj16/CD.gif"
+       });		
+    addAnnotation
+      (folderEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "rounded",
+       "label.icon", "true",
+       "tool.small.bundle", "filesystem.edit",
+       "tool.small.path", "/icons/full/obj16/Folder.gif"
+       });			
+    addAnnotation
+      (shortcutEClass, 
+       source, 
+       new String[] 
+       {
+       "label.icon", "true",
+       "tool.small.bundle", "filesystem.edit",
+       "tool.small.path", "/icons/full/obj16/Trackback.gif"
        });				
+    addAnnotation
+      (fileEClass, 
+       source, 
+       new String[] 
+       {
+       "figure", "figures.FileFigure",
+       "label", "name",
+       "label.icon", "true",
+       "tool.small.bundle", "filesystem.edit",
+       "tool.small.path", "/icons/full/obj16/List.gif"
+       });
   }
 
   /**
@@ -420,15 +471,15 @@ public class FilesystemPackageImpl extends EPackageImpl implements FilesystemPac
    * <!-- end-user-doc -->
    * @generated
    */
-  protected void createGmf_2Annotations()
+  protected void createGmf_3Annotations()
   {
-    String source = "gmf.compartment";				
+    String source = "gmf.compartment";						
     addAnnotation
       (getFolder_Contents(), 
        source, 
        new String[] 
        {
-       });			
+       });				
   }
 
   /**
@@ -437,9 +488,9 @@ public class FilesystemPackageImpl extends EPackageImpl implements FilesystemPac
    * <!-- end-user-doc -->
    * @generated
    */
-  protected void createGmf_3Annotations()
+  protected void createGmf_4Annotations()
   {
-    String source = "gmf.link";					
+    String source = "gmf.link";								
     addAnnotation
       (getShortcut_Target(), 
        source, 
@@ -458,24 +509,6 @@ public class FilesystemPackageImpl extends EPackageImpl implements FilesystemPac
        "style", "dot",
        "width", "2"
        });	
-  }
-
-  /**
-   * Initializes the annotations for <b>gmf.node</b>.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  protected void createGmf_4Annotations()
-  {
-    String source = "gmf.node";							
-    addAnnotation
-      (fileEClass, 
-       source, 
-       new String[] 
-       {
-       "label", "name"
-       });
   }
 
 } //FilesystemPackageImpl

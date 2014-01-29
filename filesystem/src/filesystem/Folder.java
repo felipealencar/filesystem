@@ -3,6 +3,7 @@
 package filesystem;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see filesystem.FilesystemPackage#getFolder()
- * @model
+ * @model annotation="gmf.node figure='rounded' label.icon='true' tool.small.bundle='filesystem.edit' tool.small.path='/icons/full/obj16/Folder.gif'"
  * @generated
  */
 public interface Folder extends File

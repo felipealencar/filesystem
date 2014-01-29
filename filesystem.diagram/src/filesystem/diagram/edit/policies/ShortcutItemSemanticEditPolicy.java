@@ -38,7 +38,7 @@ public class ShortcutItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ShortcutItemSemanticEditPolicy() {
-		super(FilesystemElementTypes.Shortcut_3003);
+		super(FilesystemElementTypes.Shortcut_3007);
 	}
 
 	/**

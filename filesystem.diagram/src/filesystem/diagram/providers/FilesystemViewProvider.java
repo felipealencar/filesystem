@@ -62,6 +62,7 @@ import filesystem.diagram.edit.parts.ShortcutEditPart;
 import filesystem.diagram.edit.parts.ShortcutNameEditPart;
 import filesystem.diagram.edit.parts.ShortcutTargetEditPart;
 import filesystem.diagram.edit.parts.SyncEditPart;
+import filesystem.diagram.edit.parts.WrappingLabel2EditPart;
 import filesystem.diagram.edit.parts.WrappingLabelEditPart;
 import filesystem.diagram.part.FilesystemVisualIDRegistry;
 
@@ -240,13 +241,13 @@ public class FilesystemViewProvider extends AbstractProvider implements
 			return createDrive_2001(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case Drive2EditPart.VISUAL_ID:
-			return createDrive_3001(domainElement, containerView, index,
+			return createDrive_3008(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case FolderEditPart.VISUAL_ID:
-			return createFolder_3002(domainElement, containerView, index,
+			return createFolder_3009(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case ShortcutEditPart.VISUAL_ID:
-			return createShortcut_3003(domainElement, containerView, index,
+			return createShortcut_3007(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case FileEditPart.VISUAL_ID:
 			return createFile_3004(domainElement, containerView, index,
@@ -331,7 +332,7 @@ public class FilesystemViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createDrive_3001(EObject domainElement, View containerView,
+	public Node createDrive_3008(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.getStyles().add(
@@ -369,7 +370,7 @@ public class FilesystemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5004 = createLabel(node,
+		Node label5010 = createLabel(node,
 				FilesystemVisualIDRegistry
 						.getType(DriveName2EditPart.VISUAL_ID));
 		createCompartment(
@@ -383,7 +384,7 @@ public class FilesystemViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createFolder_3002(EObject domainElement, View containerView,
+	public Node createFolder_3009(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.getStyles().add(
@@ -421,7 +422,7 @@ public class FilesystemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(node,
+		Node label5009 = createLabel(node,
 				FilesystemVisualIDRegistry
 						.getType(FolderNameEditPart.VISUAL_ID));
 		createCompartment(
@@ -435,7 +436,7 @@ public class FilesystemViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createShortcut_3003(EObject domainElement, View containerView,
+	public Node createShortcut_3007(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -471,7 +472,7 @@ public class FilesystemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5001 = createLabel(node,
+		Node label5008 = createLabel(node,
 				FilesystemVisualIDRegistry
 						.getType(ShortcutNameEditPart.VISUAL_ID));
 		return node;
@@ -515,7 +516,7 @@ public class FilesystemViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5002 = createLabel(node,
+		Node label5007 = createLabel(node,
 				FilesystemVisualIDRegistry.getType(FileNameEditPart.VISUAL_ID));
 		return node;
 	}

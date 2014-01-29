@@ -67,15 +67,18 @@ public class FilesystemElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Drive_3001 = getElementType("filesystem.diagram.Drive_3001"); //$NON-NLS-1$
+	public static final IElementType Drive_3008 = getElementType("filesystem.diagram.Drive_3008"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Folder_3002 = getElementType("filesystem.diagram.Folder_3002"); //$NON-NLS-1$
+	public static final IElementType Folder_3009 = getElementType("filesystem.diagram.Folder_3009"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Shortcut_3003 = getElementType("filesystem.diagram.Shortcut_3003"); //$NON-NLS-1$
+	public static final IElementType Shortcut_3007 = getElementType("filesystem.diagram.Shortcut_3007"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -205,11 +208,11 @@ public class FilesystemElementTypes {
 
 			elements.put(Drive_2001, FilesystemPackage.eINSTANCE.getDrive());
 
-			elements.put(Drive_3001, FilesystemPackage.eINSTANCE.getDrive());
+			elements.put(Drive_3008, FilesystemPackage.eINSTANCE.getDrive());
 
-			elements.put(Folder_3002, FilesystemPackage.eINSTANCE.getFolder());
+			elements.put(Folder_3009, FilesystemPackage.eINSTANCE.getFolder());
 
-			elements.put(Shortcut_3003,
+			elements.put(Shortcut_3007,
 					FilesystemPackage.eINSTANCE.getShortcut());
 
 			elements.put(File_3004, FilesystemPackage.eINSTANCE.getFile());
@@ -237,9 +240,9 @@ public class FilesystemElementTypes {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Filesystem_1000);
 			KNOWN_ELEMENT_TYPES.add(Drive_2001);
-			KNOWN_ELEMENT_TYPES.add(Drive_3001);
-			KNOWN_ELEMENT_TYPES.add(Folder_3002);
-			KNOWN_ELEMENT_TYPES.add(Shortcut_3003);
+			KNOWN_ELEMENT_TYPES.add(Drive_3008);
+			KNOWN_ELEMENT_TYPES.add(Folder_3009);
+			KNOWN_ELEMENT_TYPES.add(Shortcut_3007);
 			KNOWN_ELEMENT_TYPES.add(File_3004);
 			KNOWN_ELEMENT_TYPES.add(Sync_4001);
 			KNOWN_ELEMENT_TYPES.add(ShortcutTarget_4002);
@@ -257,11 +260,11 @@ public class FilesystemElementTypes {
 		case DriveEditPart.VISUAL_ID:
 			return Drive_2001;
 		case Drive2EditPart.VISUAL_ID:
-			return Drive_3001;
+			return Drive_3008;
 		case FolderEditPart.VISUAL_ID:
-			return Folder_3002;
+			return Folder_3009;
 		case ShortcutEditPart.VISUAL_ID:
-			return Shortcut_3003;
+			return Shortcut_3007;
 		case FileEditPart.VISUAL_ID:
 			return File_3004;
 		case SyncEditPart.VISUAL_ID:

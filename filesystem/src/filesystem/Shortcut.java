@@ -2,6 +2,8 @@
  */
 package filesystem;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +18,7 @@ package filesystem;
  * </p>
  *
  * @see filesystem.FilesystemPackage#getShortcut()
- * @model
+ * @model annotation="gmf.node label.icon='true' tool.small.bundle='filesystem.edit' tool.small.path='/icons/full/obj16/Trackback.gif'"
  * @generated
  */
 public interface Shortcut extends File

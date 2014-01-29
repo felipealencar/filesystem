@@ -61,7 +61,7 @@ public class FolderNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 5009;
 
 	/**
 	 * @generated
@@ -311,7 +311,7 @@ public class FolderNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = FilesystemParserProvider
 					.getParser(
-							FilesystemElementTypes.Folder_3002,
+							FilesystemElementTypes.Folder_3009,
 							getParserElement(),
 							FilesystemVisualIDRegistry
 									.getType(filesystem.diagram.edit.parts.FolderNameEditPart.VISUAL_ID));

@@ -215,11 +215,11 @@ public class FilesystemDiagramUpdater {
 		case DriveEditPart.VISUAL_ID:
 			return getDrive_2001ContainedLinks(view);
 		case Drive2EditPart.VISUAL_ID:
-			return getDrive_3001ContainedLinks(view);
+			return getDrive_3008ContainedLinks(view);
 		case FolderEditPart.VISUAL_ID:
-			return getFolder_3002ContainedLinks(view);
+			return getFolder_3009ContainedLinks(view);
 		case ShortcutEditPart.VISUAL_ID:
-			return getShortcut_3003ContainedLinks(view);
+			return getShortcut_3007ContainedLinks(view);
 		case FileEditPart.VISUAL_ID:
 			return getFile_3004ContainedLinks(view);
 		case SyncEditPart.VISUAL_ID:
@@ -236,11 +236,11 @@ public class FilesystemDiagramUpdater {
 		case DriveEditPart.VISUAL_ID:
 			return getDrive_2001IncomingLinks(view);
 		case Drive2EditPart.VISUAL_ID:
-			return getDrive_3001IncomingLinks(view);
+			return getDrive_3008IncomingLinks(view);
 		case FolderEditPart.VISUAL_ID:
-			return getFolder_3002IncomingLinks(view);
+			return getFolder_3009IncomingLinks(view);
 		case ShortcutEditPart.VISUAL_ID:
-			return getShortcut_3003IncomingLinks(view);
+			return getShortcut_3007IncomingLinks(view);
 		case FileEditPart.VISUAL_ID:
 			return getFile_3004IncomingLinks(view);
 		case SyncEditPart.VISUAL_ID:
@@ -257,11 +257,11 @@ public class FilesystemDiagramUpdater {
 		case DriveEditPart.VISUAL_ID:
 			return getDrive_2001OutgoingLinks(view);
 		case Drive2EditPart.VISUAL_ID:
-			return getDrive_3001OutgoingLinks(view);
+			return getDrive_3008OutgoingLinks(view);
 		case FolderEditPart.VISUAL_ID:
-			return getFolder_3002OutgoingLinks(view);
+			return getFolder_3009OutgoingLinks(view);
 		case ShortcutEditPart.VISUAL_ID:
-			return getShortcut_3003OutgoingLinks(view);
+			return getShortcut_3007OutgoingLinks(view);
 		case FileEditPart.VISUAL_ID:
 			return getFile_3004OutgoingLinks(view);
 		case SyncEditPart.VISUAL_ID:
@@ -292,7 +292,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getDrive_3001ContainedLinks(
+	public static List<FilesystemLinkDescriptor> getDrive_3008ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -300,7 +300,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getFolder_3002ContainedLinks(
+	public static List<FilesystemLinkDescriptor> getFolder_3009ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -308,7 +308,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getShortcut_3003ContainedLinks(
+	public static List<FilesystemLinkDescriptor> getShortcut_3007ContainedLinks(
 			View view) {
 		Shortcut modelElement = (Shortcut) view.getElement();
 		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
@@ -351,7 +351,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getDrive_3001IncomingLinks(
+	public static List<FilesystemLinkDescriptor> getDrive_3008IncomingLinks(
 			View view) {
 		Drive modelElement = (Drive) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -367,7 +367,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getFolder_3002IncomingLinks(
+	public static List<FilesystemLinkDescriptor> getFolder_3009IncomingLinks(
 			View view) {
 		Folder modelElement = (Folder) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -383,7 +383,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getShortcut_3003IncomingLinks(
+	public static List<FilesystemLinkDescriptor> getShortcut_3007IncomingLinks(
 			View view) {
 		Shortcut modelElement = (Shortcut) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -434,7 +434,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getDrive_3001OutgoingLinks(
+	public static List<FilesystemLinkDescriptor> getDrive_3008OutgoingLinks(
 			View view) {
 		Drive modelElement = (Drive) view.getElement();
 		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
@@ -445,7 +445,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getFolder_3002OutgoingLinks(
+	public static List<FilesystemLinkDescriptor> getFolder_3009OutgoingLinks(
 			View view) {
 		Folder modelElement = (Folder) view.getElement();
 		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();
@@ -456,7 +456,7 @@ public class FilesystemDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FilesystemLinkDescriptor> getShortcut_3003OutgoingLinks(
+	public static List<FilesystemLinkDescriptor> getShortcut_3007OutgoingLinks(
 			View view) {
 		Shortcut modelElement = (Shortcut) view.getElement();
 		LinkedList<FilesystemLinkDescriptor> result = new LinkedList<FilesystemLinkDescriptor>();

@@ -283,7 +283,7 @@ public class FilesystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case Drive2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FilesystemDiagramUpdater
-						.getDrive_3001ContainedLinks(view));
+						.getDrive_3008ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -291,7 +291,7 @@ public class FilesystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case FolderEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FilesystemDiagramUpdater
-						.getFolder_3002ContainedLinks(view));
+						.getFolder_3009ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -299,7 +299,7 @@ public class FilesystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case ShortcutEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FilesystemDiagramUpdater
-						.getShortcut_3003ContainedLinks(view));
+						.getShortcut_3007ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

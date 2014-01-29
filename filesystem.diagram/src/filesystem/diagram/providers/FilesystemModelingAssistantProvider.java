@@ -55,25 +55,25 @@ public class FilesystemModelingAssistantProvider extends
 		}
 		if (editPart instanceof DriveDriveContentsCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(FilesystemElementTypes.Drive_3001);
-			types.add(FilesystemElementTypes.Folder_3002);
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Drive_3008);
+			types.add(FilesystemElementTypes.Folder_3009);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 			types.add(FilesystemElementTypes.File_3004);
 			return types;
 		}
 		if (editPart instanceof DriveDriveContentsCompartment2EditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(FilesystemElementTypes.Drive_3001);
-			types.add(FilesystemElementTypes.Folder_3002);
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Drive_3008);
+			types.add(FilesystemElementTypes.Folder_3009);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 			types.add(FilesystemElementTypes.File_3004);
 			return types;
 		}
 		if (editPart instanceof FolderFolderContentsCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(FilesystemElementTypes.Drive_3001);
-			types.add(FilesystemElementTypes.Folder_3002);
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Drive_3008);
+			types.add(FilesystemElementTypes.Folder_3009);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 			types.add(FilesystemElementTypes.File_3004);
 			return types;
 		}

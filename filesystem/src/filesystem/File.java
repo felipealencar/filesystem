@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see filesystem.FilesystemPackage#getFile()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node figure='figures.FileFigure' label='name' label.icon='true' tool.small.bundle='filesystem.edit' tool.small.path='/icons/full/obj16/List.gif'"
  * @generated
  */
 public interface File extends EObject

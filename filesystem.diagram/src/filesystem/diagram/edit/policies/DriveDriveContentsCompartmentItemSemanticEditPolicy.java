@@ -29,13 +29,13 @@ public class DriveDriveContentsCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (FilesystemElementTypes.Drive_3001 == req.getElementType()) {
+		if (FilesystemElementTypes.Drive_3008 == req.getElementType()) {
 			return getGEFWrapper(new Drive2CreateCommand(req));
 		}
-		if (FilesystemElementTypes.Folder_3002 == req.getElementType()) {
+		if (FilesystemElementTypes.Folder_3009 == req.getElementType()) {
 			return getGEFWrapper(new FolderCreateCommand(req));
 		}
-		if (FilesystemElementTypes.Shortcut_3003 == req.getElementType()) {
+		if (FilesystemElementTypes.Shortcut_3007 == req.getElementType()) {
 			return getGEFWrapper(new ShortcutCreateCommand(req));
 		}
 		if (FilesystemElementTypes.File_3004 == req.getElementType()) {

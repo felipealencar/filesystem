@@ -31,6 +31,7 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import figures.FileFigure;
 import filesystem.diagram.edit.policies.ShortcutItemSemanticEditPolicy;
 import filesystem.diagram.part.FilesystemVisualIDRegistry;
 import filesystem.diagram.providers.FilesystemElementTypes;
@@ -43,7 +44,7 @@ public class ShortcutEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3003;
+	public static final int VISUAL_ID = 3007;
 
 	/**
 	 * @generated
@@ -313,15 +314,15 @@ public class ShortcutEditPart extends ShapeNodeEditPart {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == FilesystemElementTypes.Sync_4001) {
 			types.add(FilesystemElementTypes.Drive_2001);
-			types.add(FilesystemElementTypes.Drive_3001);
-			types.add(FilesystemElementTypes.Folder_3002);
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Drive_3008);
+			types.add(FilesystemElementTypes.Folder_3009);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 			types.add(FilesystemElementTypes.File_3004);
 		} else if (relationshipType == FilesystemElementTypes.ShortcutTarget_4002) {
 			types.add(FilesystemElementTypes.Drive_2001);
-			types.add(FilesystemElementTypes.Drive_3001);
-			types.add(FilesystemElementTypes.Folder_3002);
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Drive_3008);
+			types.add(FilesystemElementTypes.Folder_3009);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 			types.add(FilesystemElementTypes.File_3004);
 		}
 		return types;
@@ -344,12 +345,12 @@ public class ShortcutEditPart extends ShapeNodeEditPart {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == FilesystemElementTypes.Sync_4001) {
 			types.add(FilesystemElementTypes.Drive_2001);
-			types.add(FilesystemElementTypes.Drive_3001);
-			types.add(FilesystemElementTypes.Folder_3002);
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Drive_3008);
+			types.add(FilesystemElementTypes.Folder_3009);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 			types.add(FilesystemElementTypes.File_3004);
 		} else if (relationshipType == FilesystemElementTypes.ShortcutTarget_4002) {
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 		}
 		return types;
 	}
@@ -357,7 +358,7 @@ public class ShortcutEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class ShortcutFigure extends RoundedRectangle {
+	public class ShortcutFigure extends FileFigure {
 
 		/**
 		 * @generated
@@ -368,11 +369,6 @@ public class ShortcutEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		public ShortcutFigure() {
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
-					getMapMode().DPtoLP(8)));
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5)));
 			createContents();
 		}
 

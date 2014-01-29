@@ -79,16 +79,9 @@
     <descriptors
         name="ShortcutFigure">
       <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="ShortcutFigure">
-        <border
-            xsi:type="gmfgraph:MarginBorder">
-          <insets
-              top="5"
-              left="5"
-              bottom="5"
-              right="5"/>
-        </border>
+          xsi:type="gmfgraph:CustomFigure"
+          name="ShortcutFigure"
+          qualifiedClassName="figures.FileFigure">
         <children
             xsi:type="gmfgraph:Label"
             name="ShortcutLabelFigure"
@@ -101,16 +94,9 @@
     <descriptors
         name="FileFigure">
       <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="FileFigure">
-        <border
-            xsi:type="gmfgraph:MarginBorder">
-          <insets
-              top="5"
-              left="5"
-              bottom="5"
-              right="5"/>
-        </border>
+          xsi:type="gmfgraph:CustomFigure"
+          name="FileFigure"
+          qualifiedClassName="figures.FileFigure">
         <children
             xsi:type="gmfgraph:Label"
             name="FileLabelFigure"

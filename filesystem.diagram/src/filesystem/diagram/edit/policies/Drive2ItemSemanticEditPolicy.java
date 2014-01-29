@@ -45,7 +45,7 @@ public class Drive2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public Drive2ItemSemanticEditPolicy() {
-		super(FilesystemElementTypes.Drive_3001);
+		super(FilesystemElementTypes.Drive_3008);
 	}
 
 	/**

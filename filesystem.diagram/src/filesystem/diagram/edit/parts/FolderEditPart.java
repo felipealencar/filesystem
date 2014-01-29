@@ -32,6 +32,7 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import figures.FileFigure;
 import filesystem.diagram.edit.policies.FolderItemSemanticEditPolicy;
 import filesystem.diagram.edit.policies.OpenDiagramEditPolicy;
 import filesystem.diagram.part.FilesystemVisualIDRegistry;
@@ -45,7 +46,7 @@ public class FolderEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3002;
+	public static final int VISUAL_ID = 3009;
 
 	/**
 	 * @generated
@@ -319,9 +320,9 @@ public class FolderEditPart extends ShapeNodeEditPart {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == FilesystemElementTypes.Sync_4001) {
 			types.add(FilesystemElementTypes.Drive_2001);
-			types.add(FilesystemElementTypes.Drive_3001);
-			types.add(FilesystemElementTypes.Folder_3002);
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Drive_3008);
+			types.add(FilesystemElementTypes.Folder_3009);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 			types.add(FilesystemElementTypes.File_3004);
 		}
 		return types;
@@ -344,12 +345,12 @@ public class FolderEditPart extends ShapeNodeEditPart {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == FilesystemElementTypes.Sync_4001) {
 			types.add(FilesystemElementTypes.Drive_2001);
-			types.add(FilesystemElementTypes.Drive_3001);
-			types.add(FilesystemElementTypes.Folder_3002);
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Drive_3008);
+			types.add(FilesystemElementTypes.Folder_3009);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 			types.add(FilesystemElementTypes.File_3004);
 		} else if (relationshipType == FilesystemElementTypes.ShortcutTarget_4002) {
-			types.add(FilesystemElementTypes.Shortcut_3003);
+			types.add(FilesystemElementTypes.Shortcut_3007);
 		}
 		return types;
 	}

@@ -22,6 +22,7 @@ import filesystem.diagram.edit.parts.DriveNameEditPart;
 import filesystem.diagram.edit.parts.FileNameEditPart;
 import filesystem.diagram.edit.parts.FolderNameEditPart;
 import filesystem.diagram.edit.parts.ShortcutNameEditPart;
+import filesystem.diagram.edit.parts.WrappingLabelEditPart;
 import filesystem.diagram.parsers.MessageFormatParser;
 import filesystem.diagram.part.FilesystemVisualIDRegistry;
 
@@ -52,73 +53,73 @@ public class FilesystemParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser driveName_5004Parser;
+	private IParser driveName_5010Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getDriveName_5004Parser() {
-		if (driveName_5004Parser == null) {
+	private IParser getDriveName_5010Parser() {
+		if (driveName_5010Parser == null) {
 			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
 					.getFile_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			driveName_5004Parser = parser;
+			driveName_5010Parser = parser;
 		}
-		return driveName_5004Parser;
+		return driveName_5010Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser folderName_5003Parser;
+	private IParser folderName_5009Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFolderName_5003Parser() {
-		if (folderName_5003Parser == null) {
+	private IParser getFolderName_5009Parser() {
+		if (folderName_5009Parser == null) {
 			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
 					.getFile_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			folderName_5003Parser = parser;
+			folderName_5009Parser = parser;
 		}
-		return folderName_5003Parser;
+		return folderName_5009Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser shortcutName_5001Parser;
+	private IParser shortcutName_5008Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getShortcutName_5001Parser() {
-		if (shortcutName_5001Parser == null) {
+	private IParser getShortcutName_5008Parser() {
+		if (shortcutName_5008Parser == null) {
 			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
 					.getFile_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			shortcutName_5001Parser = parser;
+			shortcutName_5008Parser = parser;
 		}
-		return shortcutName_5001Parser;
+		return shortcutName_5008Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser fileName_5002Parser;
+	private IParser fileName_5007Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFileName_5002Parser() {
-		if (fileName_5002Parser == null) {
+	private IParser getFileName_5007Parser() {
+		if (fileName_5007Parser == null) {
 			EAttribute[] features = new EAttribute[] { FilesystemPackage.eINSTANCE
 					.getFile_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			fileName_5002Parser = parser;
+			fileName_5007Parser = parser;
 		}
-		return fileName_5002Parser;
+		return fileName_5007Parser;
 	}
 
 	/**
@@ -129,13 +130,13 @@ public class FilesystemParserProvider extends AbstractProvider implements
 		case DriveNameEditPart.VISUAL_ID:
 			return getDriveName_5005Parser();
 		case DriveName2EditPart.VISUAL_ID:
-			return getDriveName_5004Parser();
+			return getDriveName_5010Parser();
 		case FolderNameEditPart.VISUAL_ID:
-			return getFolderName_5003Parser();
+			return getFolderName_5009Parser();
 		case ShortcutNameEditPart.VISUAL_ID:
-			return getShortcutName_5001Parser();
+			return getShortcutName_5008Parser();
 		case FileNameEditPart.VISUAL_ID:
-			return getFileName_5002Parser();
+			return getFileName_5007Parser();
 		}
 		return null;
 	}
